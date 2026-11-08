@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="theme-color" content="#101619">
+  <title>City of Chaos — Neon Harbor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="game-shell">
+    <canvas id="game" aria-label="City of Chaos game"></canvas>
+    <div class="topbar">
+      <div class="brand"><span class="brand-mark">C</span><div><strong>CITY OF CHAOS</strong><small>NEON HARBOR · FREE ROAM</small></div></div>
+      <div class="district-tag"><i></i><span id="district">OLD TOWN</span></div>
+      <div class="status"><span class="clock" id="clock">20:40</span><span class="weather" id="weather">☾ CLEAR</span></div>
+    </div>
+    <section class="mission-card" id="mission-card">
+      <div class="mission-kicker"><span class="pulse"></span> STREET CONTRACT</div>
+      <div id="mission-title">A favor for Frankie</div>
+      <p id="mission-copy">Find the payphone in Old Town. The night is young.</p>
+      <div class="mission-footer"><span id="mission-reward">REWARD <b>$450</b></span><button id="mission-action" type="button">M · ACCEPT</button><span id="mission-step">01 / 03</span></div>
+    </section>
+    <div class="right-stack">
+      <div class="wanted-card"><span class="label">HEAT</span><div id="stars">☆☆☆☆☆</div></div>
+      <div class="map-card"><canvas id="minimap" width="180" height="140"></canvas><span class="map-label">NEON HARBOR</span></div>
+    </div>
+    <div class="bottom-left">
+      <div class="health-row"><span>VITALS</span><div class="bar"><i id="health-fill"></i></div><b id="health-value">100</b></div>
+      <div class="cash-row"><span class="cash-symbol">$</span><strong id="cash">1,250</strong><span class="rep">REP <b id="rep">0</b></span></div>
+      <div class="weapon-row"><span class="weapon-icon">✦</span><span id="weapon-name">SIDEARM</span><b id="ammo">∞</b><span class="hint" id="control-hint">WASD MOVE · SHIFT RUN · E ENTER · CLICK FIRE</span></div>
+    </div>
+    <div class="toast" id="toast"></div>
+    <div class="interact-prompt" id="prompt"></div>
+    <div class="touch-ui" id="touch-ui">
+      <div class="stick-zone" id="stick-zone"><div class="stick" id="stick"></div></div>
+      <div class="touch-actions"><button id="touch-run">RUN</button><button id="touch-enter">ENTER</button><button id="touch-fire">FIRE</button></div>
+    </div>
+    <div class="start-screen" id="start-screen">
+      <div class="start-content"><div class="eyebrow">A NEON HARBOR STORY</div><h1>CITY OF<br><em>CHAOS</em></h1><p>A city that never sleeps. A name nobody forgets.</p><button id="start-button">ENTER THE CITY <span>↗</span></button><div class="start-foot">WASD / ARROWS TO MOVE · MOUSE TO AIM · E TO JACK A RIDE</div></div>
+      <div class="start-side"><div class="big-number">01</div><div class="side-line"></div><span>THE NIGHT<br>IS YOURS</span><div class="side-coords">34° 02' N<br>118° 14' W</div></div>
+    </div>
+    <div class="pause-badge" id="pause-badge">PAUSED <span>PRESS P</span></div>
+    <div class="mobile-tip" id="mobile-tip">Left pad: move · right: drive / fire / run</div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
